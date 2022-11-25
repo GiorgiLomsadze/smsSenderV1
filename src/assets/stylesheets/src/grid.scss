@@ -1,0 +1,145 @@
+
+@import 'vars';
+
+.c{
+    $_c: &;
+    @each $device, $size in $breakpoints {
+        @media only screen and (min-width: $size){
+            &-col-#{$device}{
+                @for $i from 1 through $grids {
+                    &-#{$i} {
+                        flex: 1 0  100% * ($i / $grids) !important;
+                        max-width: 100% * ($i / $grids) !important;
+                        // padding: 0 getGutter($device);
+                    }
+                }
+            }
+            &-d-#{$device}{
+                @each $d in $display {
+                    &-#{$d}{
+                        display: $d !important;
+                    }
+                }
+            }
+            &-flex-#{$device}{
+                @each $f in $flex {
+                    &-#{$f}{
+                        flex: $f !important;
+                    }
+                }
+            }
+            &-justify-#{$device}{
+                @each $j in $justify{
+                    &-#{$j}{
+                        justify-content: $j !important;
+                    }
+                }
+            }
+            &-align-#{$device}{
+                @each $a in $align {
+                    &-self-#{$a}{
+                        align-self: $a !important;
+                    }
+                    &-content-#{$a}{
+                        align-content: $a !important;
+                    }
+                }
+            }
+
+            @for $i from 1 through $grids {
+                &-col-#{$i} {
+                    padding: 0 getGutter($device) / 2;
+                }
+            }
+
+            &-container{
+                width: 100%;
+                max-width: $containerMaxWidth;
+                margin: 0 auto;
+                padding: 0 getGutter($device);
+
+                &-fluid{
+                    // padding: 0 getGutter($device);
+                    padding: 0;
+                    max-width: 100vw;
+                    .c-row{
+                        padding: 0 !important;
+                        margin: 0 !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+            &-row{
+                width: calc(100% + 2 * #{getGutter($device)});
+                margin-left: -1 * getGutter($device);
+                padding: 0 getGutter($device) / 2;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+            }
+            &-col{
+                padding: 0 getGutter($device) / 2;
+                flex: 1 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    @media only screen and (max-width: getScreen(xs)){
+        $device: xs;
+        &-row &-col{
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        &-container{
+            width: 100%;
+            max-width: $containerMaxWidth;
+            margin: 0 auto;
+            padding: 0 getGutter($device);
+        }
+        &-row{
+            width: calc(100% + 2 * #{getGutter($device)});
+            margin-left: -1 * getGutter($device);
+            padding: 0 getGutter($device) / 2;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    @for $i from 1 through $grids {
+        &-col-#{$i} {
+            flex: 1 0  100% * ($i / $grids);
+            max-width: 100% * ($i / $grids);
+        }
+    }
+    &-d{
+        @each $d in $display {
+            &-#{$d}{
+                display: $d;
+            }
+        }
+    }
+    &-flex{
+        @each $f in $flex {
+            &-#{$f}{
+                flex-direction: $f;
+            }
+        }
+    }
+    &-justify{
+        @each $j in $justify{
+            &-#{$j}{
+                justify-content: $j;
+            }
+        }
+    }
+    &-align{
+        @each $a in $align {
+            &-self-#{$a}{
+                align-self: $a;
+            }
+            &-content-#{$a}{
+                align-content: $a;
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+
+@import 'vars';
+
+.c-page-inner{
+    .c-main-box{
+        @media only screen and (max-width: getScreen(md)) and (min-width: getScreen(xs)){
+            padding: 30px 15px !important;
+        }
+    }
+    .inner-title{
+        font-size: 22px;
+        color: getColor(dark);
+        padding: 10px 50px;
+        padding-top: 20px;
+        padding-bottom: 29px;
+        @media only screen and (max-width: getScreen(xs)){
+            padding-bottom: 0;
+        }
+    }
+
+    .inner{
+        &-button{
+            &-wrap{
+                @extend .button-wrap;
+            }
+            &-link{
+                @extend .button-link;
+                background-color: getColor(pink);
+            }
+        }
+    }
+    
+    .inner-items{
+        .inner-content-item{
+            padding: 10px 0;
+            &:first-child{
+                padding-top: 0;
+            }
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+
+            &-title{
+                color: getColor(borderBlue);
+                font-size: 16px;
+            }
+
+            &-text{
+                padding-top: 6px;
+                color: getColor(dark);
+                font-size: 14px;
+            }
+        }
+        &-left{
+            .inner-content-item{
+                background-color: getColor(light);
+                border-radius: $radius;
+                padding: 30px !important;
+            }
+            .inner-content-sub{
+                &-item{
+                    display: flex;
+                    flex-direction: row;
+
+                    &-left{
+                        width: 40%;
+                        padding-right: 15px;
+                        margin-right: 15px;
+                        border-right: 2px solid getColor(borderBlue);
+                    }
+                    @media only screen and (max-width: getScreen(xs)){
+                        flex-direction: column;
+                        &-left{
+                            width: 100%;
+                            padding: initial;
+                            margin-right: initial;
+                            border: 0;;
+                        }
+                    }
+                    
+                    &-divider{
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+        &-right{
+            @media only screen and (max-width: getScreen(md)) and (min-width: getScreen(xs)){
+                padding: 30px;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: getScreen(xs)){
+        .c-main-box{
+            border: 0;
+            padding: 20px !important;
+        }
+        .inner{
+            &-title{
+                color: getColor(lightBlue);
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            &-items{
+                &-left{
+                    .inner-content-item{
+                        background: transparent;
+
+                        padding: 10px 0 !important;
+
+                        &:last-child{
+                            margin-top: 0 !important;
+                        }
+
+                        table{
+                            display: block;
+                            padding-bottom: 10px;;
+                            border-bottom: 2px solid rgba(getColor(borderBlue), .6);
+                            tbody{
+                                display: block;
+                                tr{
+                                    height: auto;;
+                                    display: block;
+                                    padding-bottom: 10px;
+                                    td{
+                                        border: 0;
+                                        display: block;
+                                        width: 100%;
+                                        .title, .value{
+                                            border: 0;
+                                            padding-top: 5px;
+                                            padding:0;
+                                        }
+
+                                        .title{
+                                            font-size: 14px;
+                                        }
+                                        .value{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

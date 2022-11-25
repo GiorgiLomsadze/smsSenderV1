@@ -1,0 +1,324 @@
+.button-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+.button-link {
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+  padding: 11px 45px;
+  font-size: 16px;
+  border: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .button-link {
+    flex: 1;
+  }
+}
+
+.brr {
+  border: 1px solid red;
+}
+
+.before-c-main, .before-c-main-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 40px;
+}
+.before-c-main .item, .before-c-main-second .item {
+  font-size: 16px;
+  z-index: 2;
+  color: #3E3E3E;
+  text-align: center;
+  border-bottom: 2px solid #008DD0;
+  padding: 0 10px 10px 10px;
+}
+@media only screen and (min-width: 1365px) {
+  .before-c-main .item, .before-c-main-second .item {
+    transform: translateY(54px) !important;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .before-c-main .item, .before-c-main-second .item {
+    transform: translateY(23px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .before-c-main .item, .before-c-main-second .item {
+    transform: translateY(23px);
+  }
+}
+.before-c-main-second {
+  width: 100%;
+}
+.before-c-main-second .item {
+  border: 0;
+  color: #004CBF;
+  transform: translateY(54px) !important;
+}
+
+.c-page-account .account-header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.c-page-account .account-header-top-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.c-page-account .account-header-top .icon {
+  width: 22px;
+}
+.c-page-account .account-header-top .icon path {
+  fill: #fff;
+}
+.c-page-account .account-header-top .text {
+  margin-left: 10px;
+  color: #fff;
+}
+.c-page-account .c-main-box {
+  border: 0;
+}
+.c-page-account .c-main .account {
+  color: #3E3E3E;
+}
+.c-page-account .c-main .account-info {
+  padding-top: 25px;
+}
+@media only screen and (min-width: 991px) and (max-width: 1365px) {
+  .c-page-account .c-main .account-row .account-content .c-col-sm-6, .c-page-account .c-main .account-row .account-content .c-col-sm-7 {
+    flex: 1 0 75% !important;
+    max-width: 75% !important;
+  }
+}
+@media only screen and (min-width: 991px) and (max-width: 1365px) {
+  .c-page-account .c-main .account-row .account-content .c-col-sm-3:last-child, .c-page-account .c-main .account-row .account-content .c-col-sm-2:last-child {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .c-page-account .c-main .account-row .account-content .account-edit-wrap {
+    flex: 0 0 100% !important;
+  }
+}
+.c-page-account .c-main .account-item-title {
+  font-size: 30px;
+  padding: 15px;
+  padding-left: 20px;
+  color: #3E3E3E;
+}
+.c-page-account .c-main .account-divider {
+  height: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 70, 178, 0.4);
+}
+.c-page-account .c-main .account-divider-wrap {
+  padding: 0 10px;
+}
+.c-page-account .c-main .account-pink-divider {
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(178, 0, 107, 0.3);
+  margin-bottom: 8px;
+}
+.c-page-account .c-main .account-details {
+  font-size: 16px;
+  color: #3E3E3E;
+}
+@media only screen and (max-width: 1365px) {
+  .c-page-account .c-main .account-details {
+    margin-top: 15px;
+  }
+}
+@media only screen and (min-width: 1365px) {
+  .c-page-account .c-main .account-details {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .c-page-account .c-main .account-details {
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+.c-page-account .c-main .account-details.attachmented .account-details-col:first-child {
+  flex: 0 0 40%;
+}
+.c-page-account .c-main .account-details.attachmented .account-details-col:last-child {
+  flex: 1 !important;
+}
+.c-page-account .c-main .account-details-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.c-page-account .c-main .account-details-row.head {
+  margin-bottom: 12px;
+}
+.c-page-account .c-main .account-details-row.inters-list, .c-page-account .c-main .account-details-row .inters-list {
+  color: #008DD0;
+}
+@media only screen and (max-width: 767px) {
+  .c-page-account .c-main .account-details-row {
+    flex-direction: column;
+  }
+}
+.c-page-account .c-main .account-details-col {
+  padding: 2.5px;
+}
+@media only screen and (min-width: 767px) {
+  .c-page-account .c-main .account-details-col {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+}
+.c-page-account .c-main .account-details-col.att a {
+  color: #008DD0;
+  text-decoration: none;
+}
+.c-page-account .c-main .account-details-col .divider {
+  padding-top: 5px;
+}
+.c-page-account .c-main .account-content {
+  padding: 20px 0;
+}
+@media only screen and (max-width: 1365px) {
+  .c-page-account .c-main .account-content {
+    padding-top: 0;
+  }
+}
+.c-page-account .c-main .account-content._d {
+  padding-top: 0;
+}
+.c-page-account .c-main .account-content._d .account-details {
+  margin-top: 20px !important;
+}
+@media only screen and (max-width: 991px) {
+  .c-page-account .c-main .account-content._d .account-details {
+    margin-top: 5px !important;
+  }
+}
+.c-page-account .c-main .account-content._d .account-details._d .account-details-col {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  padding-right: 5px;
+}
+@media only screen and (min-width: 767px) {
+  .c-page-account .c-main .account-content._d .account-details._f .account-details-row {
+    flex-direction: row;
+  }
+}
+.c-page-account .c-main .account-content._d .account-details._f .account-details-col.diff {
+  padding-top: 2px;
+}
+@media only screen and (min-width: 767px) {
+  .c-page-account .c-main .account-content._d .account-details._f .account-details-col {
+    padding-right: 5px;
+  }
+  .c-page-account .c-main .account-content._d .account-details._f .account-details-col:first-child {
+    flex: 0 0 25%;
+    width: 25%;
+  }
+  .c-page-account .c-main .account-content._d .account-details._f .account-details-col:last-child {
+    flex: 0 0 75% !important;
+    width: 75% !important;
+  }
+}
+.c-page-account .c-main .account-content._d .pre-comment {
+  margin-top: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(178, 0, 107, 0.3);
+  margin-bottom: 3px;
+}
+@media only screen and (max-width: 991px) {
+  .c-page-account .c-main .account-info {
+    padding: 20px;
+  }
+}
+.c-page-account .c-main .account-info-name {
+  font-size: 40px;
+  color: #3E3E3E;
+}
+.c-page-account .c-main .account-info-mail {
+  margin-top: 5px;
+  color: #008DD0;
+}
+.c-page-account .c-main .account-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: transparent;
+}
+.c-page-account .c-main .account-image-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+}
+@media only screen and (min-width: 1365px) {
+  .c-page-account .c-main .account-image-wrap {
+    padding: 25px;
+  }
+  .c-page-account .c-main .account-image-wrap svg {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 1365px) {
+  .c-page-account .c-main .account-image-wrap {
+    justify-content: center;
+  }
+  .c-page-account .c-main .account-image-wrap svg {
+    width: 400px;
+  }
+}
+.c-page-account .c-main .account-edit {
+  padding: 0 15px;
+}
+@media only screen and (min-width: 767px) {
+  .c-page-account .c-main .account-edit {
+    padding: 15px;
+  }
+}
+.c-page-account .c-main .account-edit-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.c-page-account .c-main .account-link {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #3E3E3E;
+  cursor: pointer;
+}
+.c-page-account .c-main .account-link .text {
+  padding-right: 10px;
+  margin-top: -5px;
+}
+.c-page-account .c-main .account-link .icon {
+  width: 25px;
+}
+.c-page-account .c-main .account-link .icon svg {
+  width: 25px;
+  border-radius: 50%;
+  fill: #B2006B;
+  height: 25px;
+}
+
+/*# sourceMappingURL=account.css.map */

@@ -1,0 +1,119 @@
+
+$breakpoints: (
+    xs: 767px,
+    sm: 991px,
+    md: 1365px,
+    lg: 1680px,
+    xl: 1920px,
+);
+
+$grids: 12;
+$gutters: (
+    xl: 30px,
+    lg: 30px,
+    md: 30px,
+    sm: 20px,
+    xs: 5px
+);
+
+$containerMaxWidth: 1800px;
+
+$flex: (
+    row,
+    column,
+    row-reverse,
+    column-reverse,
+);
+
+$align: (
+    flex-start,
+    flex-end,
+    center
+);
+
+$justify: (
+    flex-start,
+    flex-end,
+    center,
+    space-between,
+    space-around
+);
+
+$display: (
+    block,
+    none,
+    inline-block,
+    inline,
+    flex
+);
+
+$radius: 8px;
+
+@function getGutter($device){
+    @each $d, $v in $gutters {
+        @if $d == $device {
+            @return $v;
+        }
+    }
+}
+@function getScreen($device){
+    @each $screen, $size in $breakpoints {
+        @if $screen == $device {
+            @return $size;
+        }
+    }
+}
+
+
+$colors: (
+    white: #fff,
+    black: #000,
+    dark: #3E3E3E,
+    lightBlue: #034694,
+    darkblue: #0051CC,
+    lighterBlue: #0051CE,
+    lightestBlue: #017BD0,
+    light2Blue: #004CBF,
+    justBlue: #90A4CC,
+    light: #F8F8F8,
+    pink: #B2006B,
+    muted: #707070,
+    borderBlue: #008DD0,
+    borderGray: #D5D5D5,
+    lightBorderBlue: #A5DCF6,
+    scrollBg: #D9D9D9,
+    dividerBg: #0046B2
+);
+
+@function getColor($color){
+    @each $c in $colors {
+        @if nth($c, 1) == $color {
+            @return nth($c, 2);
+        }
+    }
+}
+
+
+
+.button{
+    &-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: getColor(white);
+        border: 0;
+        padding: 11px 45px;
+        font-size: 16px;
+        border: 0;
+        text-align: center;
+        border-radius: $radius;
+        @media only screen and (max-width: getScreen(xs)){
+            flex: 1;
+        }
+    }
+}

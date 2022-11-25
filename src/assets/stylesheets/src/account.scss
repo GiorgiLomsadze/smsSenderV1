@@ -1,0 +1,325 @@
+
+@import 'vars';
+
+
+.brr{
+    border: 1px solid red;
+}
+.before-c-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 40px;
+    .item{
+        font-size: 16px;
+        z-index: 2;
+        color: getColor(dark);
+        text-align: center;
+        border-bottom: 2px solid getColor(borderBlue);
+        padding: 0 10px 10px 10px;
+        @media only screen and (min-width: getScreen(md)){
+            transform: translateY(54px) !important;
+        }
+        @media only screen and (min-width: getScreen(xs)){
+            transform: translateY(23px);
+        }
+        @media only screen and (max-width: getScreen(xs)){
+            transform: translateY(23px);
+        }
+    }
+
+    &-second{
+        @extend .before-c-main;
+        width: 100%;
+        .item{
+            border: 0;
+            color: getColor(light2Blue);
+            transform: translateY(54px) !important;
+        }
+    }
+}
+.c-page-account{
+    .account-header{
+        &-top{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            &-wrap{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .icon{
+                width: 22px;
+                path{
+                    fill: getColor(white);
+                }
+            }
+
+            .text{
+                margin-left: 10px;
+                color: getColor(white);
+            }
+        }
+    }
+
+    .c-main{
+        &-box{
+            border: 0;
+        }
+
+        .account{
+            color: getColor(dark);
+            &-info{
+                padding-top: 25px;
+            }
+            &-row{
+                .account-content{
+                    .c-col-sm-6, .c-col-sm-7{
+                        @media only screen and (min-width: getScreen(sm)) and (max-width: getScreen(md)){
+                            flex: 1 0 75% !important;
+                            max-width: 75% !important;
+                        }
+                    }
+                    @media only screen and (min-width: getScreen(sm)) and (max-width: getScreen(md)){
+                        .c-col-sm-3:last-child, .c-col-sm-2:last-child{
+                            flex: 0 0 100% !important;
+                            max-width: 100% !important;
+                        }
+                        .account-edit-wrap{
+                            flex: 0 0 100% !important;
+                        }
+                    }
+                }
+            }
+            &-item{
+                &-title{
+                    font-size: 30px;
+                    padding: 15px;
+                    padding-left: 20px;
+                    color: getColor(dark);
+                }
+            }
+            &-divider{
+                height: 10px;;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                border-radius: $radius;
+                background-color: rgba(getColor(dividerBg), 0.4);
+
+                &-wrap{
+                    padding: 0 10px;
+                }
+            }
+            &-pink{
+                &-divider{
+                    margin-top: 10px;
+                    border-bottom: 1px solid rgba(getColor(pink), .3);
+                    margin-bottom: 8px;
+                }
+            }
+            &-details{
+                @media only screen and (max-width: getScreen(md)){
+                    margin-top: 15px;;
+                }
+                @media only screen and (min-width: getScreen(md)){
+                    margin-top: 40px;
+                }
+                @media only screen and (max-width: getScreen(sm)){
+                    padding: 20px;
+                    padding-top: 0;
+                    margin-top: 0;
+                }
+                font-size: 16px;
+                color: getColor(dark);
+                &.attachmented{
+                    .account-details-col{
+                        &:first-child{
+                            flex: 0 0 40%;
+                        }
+                        &:last-child{
+                            flex: 1 !important;
+                        }
+                    }
+                }
+                &-row{
+                    &.head{
+                        margin-bottom: 12px;
+                    }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+
+                    &.inters, .inters{
+                        &-list{
+                            color: getColor(borderBlue);
+                        }
+                    }
+
+                    @media only screen and (max-width: getScreen(xs)){
+                        flex-direction: column;
+                    }
+                }
+                &-col{
+                    @media only screen and (min-width: getScreen(xs)){
+                        flex: 0 0 50%;
+                        width: 50%;
+                    }
+                    &.att{
+                        a{
+                            color: getColor(borderBlue);
+                            text-decoration: none;
+                        }
+                    }
+                    padding: 2.5px;
+                    .divider{
+                        padding-top: 5px;
+                    }
+                }
+            }
+            &-content{
+                padding: 20px 0;
+                @media only screen and (max-width: getScreen(md)){
+                    padding-top: 0;
+                }
+                &._d{
+                    padding-top: 0;
+                    .account-details{
+                        margin-top: 20px !important;
+                        @media only screen and (max-width: getScreen(sm)){
+                            margin-top: 5px !important;
+                        }
+                        &._d{
+
+                            .account-details-col{
+                                flex: 0 0 100% !important;
+                                width: 100% !important;
+                                padding-right: 5px;
+                            }
+                        }
+
+                        &._f{
+                            @media only screen and (min-width: getScreen(xs)){
+                                .account-details-row{
+                                    flex-direction: row;
+                                }
+                            }
+                            .account-details-col.diff{
+                                padding-top: 2px;
+                            }
+                            @media only screen and (min-width: getScreen(xs)){
+                                .account-details-col{
+                                    &:first-child{
+                                        flex: 0 0 25%;
+                                        width: 25%;
+                                    }
+                                    &:last-child{
+                                        flex: 0 0 75% !important;
+                                        width: 75% !important;
+                                    }
+                                    padding-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .pre-comment{
+                        margin-top: 15px;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid rgba(getColor(pink), .3);
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+
+            &-info{
+                @media only screen and (max-width: getScreen(sm)){
+                    padding: 20px;
+                }
+                &-name{
+                    font-size: 40px;
+                    color: getColor(dark);
+                }
+                &-mail{
+                    margin-top: 5px;
+                    color: getColor(borderBlue);
+                }
+            }
+            
+            &-image{
+                &-wrap{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 15px;
+                    svg{
+                    }
+                    @media only screen and (min-width: getScreen(md)){
+                        padding: 25px;
+
+                        svg{
+                            width: 300px;
+                        }
+                    }
+                    @media only screen and (max-width: getScreen(md)){
+                        svg{
+                            width: 400px;
+                        }
+                        justify-content: center;
+                    }
+                }
+
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                fill: transparent;
+            }
+            &-edit{
+                padding: 0 15px;
+                @media only screen and (min-width: getScreen(xs)){
+                    padding: 15px;
+                    .accout-link{
+                    }
+                }
+                &-wrap{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+            }
+            &-link{
+                margin-top: 10px;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background: transparent;
+                border: 0;
+                padding: 0;
+                color: getColor(dark);
+                cursor: pointer;
+
+                .text{
+                    padding-right: 10px;
+                    margin-top: -5px;
+                }
+                
+                .icon{
+                    width: 25px;
+                    svg{
+                        width: 25px;
+                        border-radius: 50%;
+                        fill: getColor(pink);
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

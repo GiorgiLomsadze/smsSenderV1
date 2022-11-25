@@ -1,0 +1,511 @@
+
+@import 'vars';
+
+.c-page-home{
+    .c-main{
+
+        @media only screen and (max-width: getScreen(sm)){
+            padding-top: 0 !important;
+        }
+        &-box{
+
+            &-tablet{
+                text-decoration: none;
+                @extend .c-main-box;
+
+                @media only screen and (max-width: getScreen(md)){
+                    padding: getGutter(xl) / 2 !important;
+                }
+                @media only screen and (max-width: getScreen(sm)){
+                    padding: getGutter(lg) / 2 !important;
+                }
+                @media only screen and (max-width: getScreen(xs)){
+                    padding: getGutter(md) / 2 !important;
+                }
+                &-wrap{
+                    @media only screen and (max-width: getScreen(md)){
+                        padding-top: getGutter(xl) / 2 !important;
+                    }
+                    @media only screen and (max-width: getScreen(sm)){
+                        padding-top: getGutter(lg) / 2 !important;
+                    }
+                    @media only screen and (max-width: getScreen(xs)){
+                        padding-top: getGutter(sm) / 2 !important;
+                    }
+
+                    &:last-child{
+                        @media only screen and (max-width: getScreen(md)){
+                            padding-bottom: getGutter(xl) / 2 !important;
+                        }
+                        @media only screen and (max-width: getScreen(sm)){
+                            padding-bottom: getGutter(lg) / 2 !important;
+                        }
+                        @media only screen and (max-width: getScreen(xs)){
+                            padding-bottom: getGutter(sm) / 2 !important;
+                        }
+                    }
+                }
+                &.active{
+                    &-favourites{
+                        .favourites{
+                            .icon{
+                                &:first-child{
+                                    opacity: 0;
+
+                                }
+                                &:last-child{
+                                    opacity: 1 !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .data-content-mobile-item-title-text {
+                        border-color: getColor(white) !important;
+                    }
+                    .data-content-mobile-item-title-badge{
+                        opacity: 0;
+                    }
+                }
+                &:hover{
+                    // @extend .active;
+                }
+            }
+
+            &-mobile{
+                @extend .c-main-box-tablet;
+
+                &-wrap{
+                    @extend .c-main-box-tablet-wrap;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+
+                &.active{
+                    .data-content-mobile-content{
+                        pointer-events: all !important;
+                        overflow: visible !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+
+                        >div{
+                            opacity: 1 !important;
+                        }
+                    }
+                    .data-content-mobile-item-head{
+                        ._toggle{
+                            .icon{
+                                &:first-child{
+                                    opacity: 0 !important;
+                                }
+                                &:last-child{
+                                    opacity: 1 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-data{
+            #data-head{
+                ._icon{
+                    .data-head-item-wrap{
+                        width: 50px;
+                    }
+                }
+            }
+            .data{
+                &-content{
+                    &-icons{
+                        width: 40px;
+                        position: relative;
+                        .icon{
+                            width: 40px;
+                            transition: 0.1s;
+
+                            &:last-child{
+                                opacity: 0;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                z-index: 1;
+
+                                path{
+                                    fill: getColor(pink);
+                                }
+                            }
+                        }
+                    }
+                }
+                &-head{
+                    display: flex;
+                    flex-direction: row;
+
+                    &-left, &-right{
+                        flex: 0 0 50%;
+                        width: 50%;
+
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    &-right{
+                        .data-head-item{
+                            max-width: calc(100% / 3);
+                        }
+                    }
+
+                    &-item{
+                        flex: 1;
+                        font-size: 14px;
+                        color: getColor(dark);
+
+                        &-wrap{
+                            height: 100%;
+                            border-bottom: 2px solid rgba(getColor(justBlue), .3);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 0 5px;;
+                            padding-top: 12px;
+
+
+                            @media only screen and (min-width: getScreen(xl)){
+                                padding-bottom: getGutter(xl) / 2 !important;
+                            }
+                            @media only screen and (max-width: getScreen(xl)){
+                                padding-bottom: getGutter(xl) / 2 !important;
+                            }
+                            @media only screen and (max-width: getScreen(lg)){
+                                padding-bottom: getGutter(lg) / 2 !important;
+                            }
+                            @media only screen and (max-width: getScreen(md)){
+                                padding-bottom: getGutter(md) / 2 !important;
+                            }
+                            @media only screen and (max-width: getScreen(sm)){
+                                padding-bottom: getGutter(sm) / 2 !important;
+                            }
+                            @media only screen and (max-width: getScreen(xs)){
+                                padding-bottom: getGutter(xs) / 2 !important;
+                            }
+                        }
+                    }
+                    &-left{
+                        .icons{
+                            @extend .data-content-icons;
+                        }
+                        ._icon{
+                            flex: 0;
+                        }
+                    }
+                }
+
+                &-content{
+                    @extend .data-head;
+                    text-decoration: none;
+                    &.active{
+                        &-favourites{
+                            .favourites{
+                                .icon{
+                                    &:first-child{
+                                        opacity: 0;
+            
+                                    }
+                                    &:last-child{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        @extend .active;
+                        @extend .active-favourites;
+                    }
+                    
+                    &:last-child{
+                        .data-content-item-wrap{
+                            border-bottom: 0;
+                        }
+                    }
+                    
+                    &-left, &-right{
+                        @extend .data-head-left;
+                    }
+
+                    &-right{
+                        @extend .data-head-right;
+                    }
+                    
+                    &-item{
+                        @extend .data-head-item;
+
+
+                        &-wrap{
+                            @extend .data-head-item-wrap;
+                            border-bottom-color: rgba(getColor(dark), .1);
+                            border-bottom-width: 1px;
+                            padding: 20px 5px !important;
+                        }
+
+                        &-title{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            color: getColor(lightBlue);
+                            text-decoration: none;
+                            line-height: 18px;;
+
+                            &-text{
+                                &-text{
+                                    border-right: 1px solid rgba(getColor(muted), .1);
+                                    margin-right: 15px;
+                                    padding-right: 10px;
+                                }
+
+                                &-badge{
+                                    
+                                }
+                            }
+
+                            &-badge{
+                                text-transform: uppercase;
+                                font-size: 10px;
+                                color: getColor(pink);
+                            }
+                        }
+                    }
+                    
+                    &-left{
+                        @extend .data-head-left;
+
+                        ._icon{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            
+                            .icon{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                svg{
+                                    width: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    &-tablet{
+                        &-item{
+                            &-title{
+                                @extend .data-content-item-title;
+                                &-text{
+                                    @extend .data-content-item-title-text;
+                                }
+
+                                &-badge{
+                                    @extend .data-content-item-title-badge;
+                                }
+                            }
+                            &-head{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .icons{
+                                    align-self: flex-start;
+                                    @extend .data-content-icons;
+
+                                    width: 25px;
+                                    margin-top: -5px;
+                                    
+                                    .icon{
+                                        width: 25px;
+                                    }
+                                }
+                            }
+                            &-info{
+                                padding: 10px 0;
+                                &-item{
+                                    font-size: inherit;
+                                    color: getColor(dark);
+                                    padding: 2px 0;
+                                }
+                            }
+
+                            &-readmore{
+                                margin-top: 10px;
+
+                                &-button{
+                                    border-radius: 50px;
+                                    padding: 5px 10px;
+                                    color: getColor(white);
+                                    font-size: 12px;
+                                    border: 0;
+                                    background-color: getColor(justBlue);
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    font-weight: inherit;
+
+                                    &-text{
+                                        margin-right: 8px;
+                                    }
+
+                                    &-icon{
+                                        svg{
+                                            width: 20px;
+
+                                            path{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-mobile{
+                        &-item{
+                            &-title{
+                                @extend .data-content-tablet-item-title;
+                                &-text{
+                                    @extend .data-content-tablet-item-title-text;
+                                    color: getColor(lightBlue);
+                                    text-decoration: none;
+                                    font-size: inherit;
+                                    display: block;
+                                }
+                                &-badge{
+                                    @extend .data-content-tablet-item-title-badge;
+                                    transition: 0.3s;
+                                }
+                                flex: 1;
+                            }
+                            &-head{
+                                @extend .data-content-tablet-item-head;
+                                .icons{
+                                    align-self: center;
+                                    @extend .data-content-icons;
+                                    width: 50px;
+                                    margin: 0;
+                                    .icon{
+                                        display: flex;
+                                        flex-direction: row;
+                                        align-items: center;
+                                        justify-content: flex-end;
+                                        width: 50px;
+                                        svg{
+                                            width: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                            &-info{
+                                @extend .data-content-tablet-item-info;
+
+                                &-item{
+                                    @extend .data-content-tablet-item-info-item;
+                                }
+                            }
+
+                            &-readmore{
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                pointer-events: none;
+                                &-link{
+                                    pointer-events: all;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    font-size: 12px;
+                                    color: getColor(dark);
+                                    text-decoration: none;
+
+                                    &-text{
+                                        padding-right: 5px;
+                                    }
+
+                                    &-icon{
+                                        width: 18px;
+                                        svg{
+                                            margin-top: 3px;
+                                            width: 18px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &-actions{
+                                position: relative;
+                                .icons{
+                                    @extend .data-content-icons;
+
+                                    width: 25px;
+
+                                    .icon{
+                                        width: 25px;
+
+                                        svg{
+                                            width: 25px;
+                                        }
+
+                                        &:last-child{
+                                            left: 7px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-content{
+                            font-size: 14px;
+                            height: 0;
+                            transition: height 0.3s;
+                            overflow: hidden;
+                            pointer-events: none;
+                            visibility: hidden;
+                            opacity: 0;
+                            
+                            >div{
+                                transition: opacity 0.3s;
+                                transition-delay: 0.3s;
+                                opacity: 0;;
+                            }
+
+                        }
+                    }
+
+                    &-items{
+                        margin-left: -15px;
+                        width: calc(100% + 30px);
+
+                        >.data-content{
+                            padding: 0 15px;
+                            transition: background-color 0.3s;
+                            
+                            &:hover{
+                                background-color: getColor(light);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 20.293 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="20.293" height="20" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g id="Group_463" data-name="Group 463" transform="translate(19497.854 6026)">
+      <g id="Group_462" data-name="Group 462" transform="translate(-21231 -6424)">
+        <rect id="Rectangle_16" data-name="Rectangle 16" width="20.293" height="20" rx="10" transform="translate(1733.146 398)" fill="#b2006b"/>
+        <path id="Path_64" data-name="Path 64" d="M9,0H0" transform="translate(1738.896 408.25)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

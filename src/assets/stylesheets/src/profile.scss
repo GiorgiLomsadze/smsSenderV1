@@ -1,0 +1,1054 @@
+
+@import 'vars';
+
+
+.c-page-profile{
+    .before-c-main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 40px;
+        .item{
+            font-size: 16px;
+            z-index: 2;
+            color: getColor(dark);
+            text-align: center;
+            border-bottom: 2px solid getColor(borderBlue);
+            padding: 0 10px 10px 10px;
+            @media only screen and (min-width: getScreen(md)){
+                transform: translateY(54px) !important;
+            }
+            @media only screen and (min-width: getScreen(xs)){
+                transform: translateY(23px);
+            }
+            @media only screen and (max-width: getScreen(xs)){
+                transform: translateY(23px);
+            }
+        }
+
+        &-second{
+            @extend .before-c-main;
+            width: 100%;
+            .item{
+                border: 0;
+                color: getColor(light2Blue);
+                transform: translateY(54px) !important;
+            }
+        }
+    }
+    .c-main{
+        &-box{
+            border: 0;
+            padding: 30px 40px !important;
+            &.copy{
+                &._pre{
+                    margin-top: 10px !important;
+                }
+                @media only screen and (max-width: getScreen(xs)){
+                    padding: 15px !important; 
+                    &._pre{
+                        margin-top: 10px !important;
+                    }
+                }
+
+            }
+
+            &-row{
+                .c-main-box{
+                        &.keep{
+                            @media only screen and (max-width: getScreen(xs)){
+                                background-color: transparent !important;
+                                box-shadow: none !important;
+                                padding: 0 !important;
+                            }
+                        }
+
+                }
+            }
+            
+            &:not(.keep){
+                margin-top: 30px;;
+                @media only screen and (max-width: getScreen(sm)){
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .c-post-header{
+        &.not-default{
+            @media only screen and (max-width: getScreen(xs)){
+                padding-top: 15px !important;
+                padding-bottom: 0 !important;
+                .pags{
+                    background-color: getColor(white);
+                    padding: 15px 0;
+                    margin-top: 15px;
+                    .page-thing-title{
+                        &-item{
+                            .number{
+                                color: getColor(darkBlue);
+                                background-color: getColor(light);
+                            }
+                            &.active{
+                                .number{
+                                    background-color: getColor(light2Blue);
+                                    color: getColor(white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .page-thing-title{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            @media only screen and (max-width: getScreen(xs)){
+                width: auto;
+            }
+    
+            &-item{
+                width: 165px;
+                padding: 0 15px;
+                cursor: pointer;
+                text-decoration: none;
+                color: getColor(white);
+    
+                border-right: 1px solid rgba(getColor(borderBlue), .6);
+    
+                &:last-child{
+                    border: 0;
+                }
+    
+                @media only screen and (max-width: getScreen(xs)){
+                    width: auto;
+                    padding: 0 10px;
+                }
+                &.active{
+                    .page-thing-title{
+                        &-item{
+                            &-wrap{
+                                &-items{
+                                    .number{
+                                        background-color: getColor(white);
+                                        color: getColor(dark);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-wrap{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+    
+                    &-items{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+    
+                        .number{
+                            flex: 0 0 35px;
+                            width: 35px;
+                            height: 35px;
+                            // background-color: getColor(white);
+                            color: getColor(white);
+                            border-radius: 50%;
+                            border: 1px solid getColor(borderBlue);
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 19px;
+                        }
+    
+                        .text{
+                            flex: 1;
+                            color: getColor(white);
+                            font-size: 12px;
+                            padding-left: 10px;
+    
+                            @media only screen and (max-width: getScreen(xs)){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profile{
+        &-submit{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;;
+            &.different{
+                justify-content: flex-start;
+                @media only screen and (max-width: getScreen(xs)){
+                    justify-content: center;
+                }
+            }
+            &-button{
+                &-wrap{
+                    @extend .button-wrap;
+                }
+                &-link{
+                    @extend .button-link;
+                    border: 0;
+                    background-color: getColor(pink);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 200px !important;
+    
+                    @media only screen and (max-width: getScreen(xs)){
+                        width: 100% !important;
+                    }
+    
+                    @media only screen and (min-width: getScreen(xs)){
+                        padding-left: 75px;
+                        padding-right: 75px;
+                    }
+                }
+            }
+
+            &.second{
+                @media only screen and (max-width: getScreen(xs)){
+                    flex-direction: column;
+                    .profile-submit-button{
+                        flex: 0 0 100%;
+                        width: 100%;
+                    }
+                }
+                .profile-submit-button{
+                    &.justBlue{
+                        .profile-submit-button-link{
+                            background-color: getColor(justBlue);
+                        }
+                    }
+                    padding: 5px;
+                }
+            }
+        }
+
+        .c-main{
+
+            &-box.second{
+                margin-top: 60px !important;
+            }
+
+        }
+        
+        &-sub{
+            &-inputs{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+
+                &:not(.four){
+                    .profile-sub-inputs-wrap{
+                        @media only screen and (min-width: getScreen(xs)){
+                            &:nth-child(2){
+                                flex: 0 0 50% !important;
+                            }
+                        }
+                        @media only screen and (max-width: getScreen(xs)){
+                            &:nth-child(2){
+                                flex: 0 0 100% !important;
+                            }
+                        }
+                    }
+                }
+                
+                &-wrap{
+                    flex: 0 0 25%;
+                    padding: 5px;
+
+
+                    @media only screen and (max-width: getScreen(xs)){
+                            padding: 5px;
+                        &:nth-child(2){
+                            flex: 0 0 100% !important;
+                        }
+                    }
+
+                    &._with_check{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding-left: 20px;;
+                        
+                        label{
+                            color: getColor(dark);
+                            padding: 5px;
+                            font-size: 16px;
+                        }
+                        .input{
+                            margin-left: 10px;
+                            width: auto;
+                        }
+                        &_first{
+                            @extend ._with_check;
+                            flex: 1 0 100% !important;
+                        }
+                    }
+                    
+                    @media only screen and  (max-width: getScreen(md)){
+                        flex: 1 0 calc(100% / 2) !important;
+                    }
+                    @media only screen and  (min-width: getScreen(xs)) and (max-width: getScreen(sm)){
+                        flex: 1 0 50% !important;
+                    }
+                    @media only screen  and (max-width: getScreen(xs)){
+                        flex: 1 0 100% !important;
+                    }
+           
+                    &:first-child{
+                        flex: 1 0 50%;
+
+                        @media only screen and  (max-width: getScreen(md)){
+                            flex: 1 0 100% !important;
+                        }
+                    }
+                    .input{
+                        width: 100%;
+                    }
+                    &.textarea{
+                        flex: 1 0 100% !important;
+                        .input{
+                            min-height: 100px;
+                            resize: none;
+                        }
+                    }
+                }
+            }
+            &-delete{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                &-button{
+                    &-link{
+                        cursor: pointer;
+                        border: 0;
+                        background-color: transparent;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 16px;
+                        color: getColor(dark);
+
+                        .icon{
+                            margin-left: 10px;
+                            svg{
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-second{
+                &-delete{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    width: 100%;
+                    align-items: center;
+                    &-button{
+                        &-link{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            color: getColor(dark);
+                            font-size: 16px;
+                            background-color: transparent;
+                            cursor: pointer;
+                            border: 0;
+
+                            .icon{
+                                margin-left: 10px;;
+                                svg{
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        ._left{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            .checks{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                flex: 1;
+                height: 100%;;
+                border-radius: $radius;
+                border: 1px solid rgba(62, 62, 62, 0.1);
+                padding: 15px;
+                padding-bottom: 5px;
+                background-color: getColor(white);
+                &-wrap{
+                    height: inherit;
+                }
+                .checks_list{
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    overflow-x: hidden;
+
+                    li{
+                        font-size: 16px;
+                        color: getColor(dark);
+
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        padding: 2.5px 0;
+
+                        display: flex;
+                        flex-direction: row;
+                        
+                        label{
+                            padding-left: 5px;
+                            order: 2;
+                        }
+
+                        .checkbox-lie {
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        &-top{
+            padding-bottom: 25px !important;
+            border-bottom: 1px solid rgba(getColor(pink), .2);
+            align-items: center;
+
+        }
+        &-bottom{
+            padding-top: 25px !important;
+        }
+        .select{
+            &-sex{
+                position: relative;
+                .selected{
+                    background-color: getColor(white);
+                    transition: 0.3s;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    border: 1px solid rgba(getColor(dark), .1);
+                    border-radius: $radius;
+                    color: getColor(dark);
+                    padding: 10px 10px;
+                    padding-left: 20px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    .value{
+                        color: rgba( getColor(dark), .8);
+                        font-size: 16px;
+                    }
+                    .icon{
+                        padding-right: 5px;
+                        margin-top: -2px;
+                        svg{
+                            width: 10px;
+                            path{
+                                fill: getColor(dark);
+                            }
+                        }
+                    }
+                }
+
+                .options{
+                    z-index: -1;
+                    height: 0;
+                    background: getColor(white);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    flex-direction: column;
+                    text-align: left;
+                    align-items: flex-start;
+                    @extend .selected;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    border-top: 0;
+                    border-bottom: 1px solid rgba(getColor(dark), .1) !important;
+                    border-bottom-left-radius: $radius !important;
+                    border-bottom-right-radius: $radius !important;
+                    font-size: inherit;
+                    color: getColor(muted);
+                    pointer-events: none;
+                    overflow: hidden;
+                    border-color: transparent !important;
+                    >div{
+                        width: 100%;
+                        flex: 0 0 100%;
+                    }
+                    
+                    .option{
+                        opacity: 0;
+                        transition: 0.3s;
+                        transition-delay: 0.3s;
+                        cursor: pointer;
+                        border: 0;
+                        padding: initial;
+                        background: transparent;
+                        text-align: left;
+                        color: getColor(dark);
+                        font-family: inherit;
+                        &:first-child{
+                            margin-top: -5px;;
+                            padding-top: 15px;
+                            border-top:  1px solid rgba(getColor(dark), .1) !important;
+                        }
+                        flex: 0 0 100%;
+                        width: 100%;
+                        padding: 5px 0;
+                    }
+                }
+
+                &.active{
+                    .options{
+                        border-color: rgba(getColor(dark), .1) !important;
+                        opacity: 1;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        visibility: visible;
+                        pointer-events: all;
+                        .option{
+                            opacity: 1;
+                        }
+                    }
+                    .selected{
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+        &-image{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            fill: transparent;
+
+            &-button{
+                background: transparent;
+                border: 0;
+                padding: 0;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                svg{
+                    width: 100%
+                }
+                @media only screen and (min-width: getScreen(sm)) and (max-width: getScreen(md)){
+                    top: 0;
+                    left: 0;
+                }
+                @media only screen and (min-width: getScreen(xs)) and (max-width: getScreen(sm)){
+                    left: 5% !important;
+                    top: 5% !important;
+                }
+                @media only screen and (max-width: getScreen(sm)){
+                    top: 15%;
+                    left: 15%;
+                }
+            }
+
+            &-wrap{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .input{
+            background-color: getColor(white);
+            width: 100%;
+            border: 1px solid rgba(getColor(dark), .1);
+            border-radius: $radius;
+            color: getColor(dark);
+            padding: 10px 10px;
+            padding-right: 50px;
+            padding-left: 20px;
+            font-size: 16px;
+            &-wrap{
+                padding: 5px;
+                flex:0 0 calc(100% / 3);
+            }
+            width: 100%;
+        }
+
+        &-top{
+            &-inputs{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+        }
+        &-image{
+            transition: filter 0.5s;
+            border-radius: 50%;
+            &-wrap{
+    
+                &.loading{
+                    svg{
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+        }
+        
+        &-top, &-bottom{
+            @media only screen and (max-width: getScreen(md)){
+                ._left{
+                    padding-right: 10px;
+                }
+            }
+
+            @media only screen and (max-width: getScreen(sm)) and (min-width: getScreen(xs)){
+                >.c-col{
+                    // padding: 0 !important;
+
+                    .input{
+                        font-size: 11px;
+                    }
+                }
+                .checks_list{
+                    li{
+                        font-size: 11px !important;
+                    }
+                }
+                .profile-input-title-text, .profile-input-title-check{
+                    font-size: 11px !important;
+                }
+                .dropable-select{
+                    .selected{
+                        .value{
+                            font-size: 11px !important;
+                        }
+                    }
+                    .option{
+                        font-size: 11px !important;
+                    }
+                }
+            }
+        }
+
+        &-input{
+            &-box{
+                margin-top: 15px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+            &-title{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-bottom: 5px;;
+                padding: 0 2.5px  5px 2.5px;
+
+                &-text{
+                    color: getColor(light2Blue);
+                    font-size: 16px;
+                }
+
+                &-check{
+                    color: getColor(dark);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    label{
+                        padding-right: 5px;;
+                    }
+                }
+            }
+
+            &-content{
+                &._d{
+                    .profile-input-wrap{
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .input{
+                            margin-top: 10px !important;;
+                            flex: 0 0 100%;
+                        }
+                    }
+                    @media only screen and (min-width: getScreen(sm)){
+                        .profile-input-wrap{
+                            .input{
+                                flex: 0 0 calc(50% - 5px);
+                            }
+                        }
+                    }
+                }
+            }
+            &-wrap{
+                display: flex;
+                flex-direction: row;
+                padding: 5px 2.5px;
+                .input{
+                    
+                }
+            }
+        }
+
+        .toggler{
+            .input{
+                pointer-events: all;
+                cursor: default;
+                opacity: 1;
+                transition: opacity 0.3s;
+            }
+        }
+        
+        .closed{
+            .input{
+                opacity: 0.7;
+                pointer-events: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media only screen and (min-width: getScreen(md)){
+        ._image-wrap{
+            transform: scale(0.8);
+        }
+    }
+
+    @media only screen and (max-width: getScreen(xs)){
+        .c-main{
+            z-index: 0;
+        }
+        .profile-image-wrap{
+            background-color: getColor(white);
+            border-radius: $radius;
+            box-shadow: 0 0 18px 1px rgba(getColor(black), .1);
+            padding: 35px !important;
+            
+        }
+
+        ._image-wrap{
+            padding: 0 8px;
+            margin-bottom: 10px;
+            
+        }
+        
+        ._left{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        ._right .profile-input-box:first-child{
+            padding-top: 15px !important;
+        }
+        .c-main{
+            &-box:not(.keep), &-box:not(&.copy){
+                z-index: 0;
+                // background-color: transparent;
+                padding: 5px  10px !important;
+                padding-top: 0 !important;
+                box-shadow: none;
+            }
+
+            &-box.keep{
+                @media only screen and (max-width: getScreen(sm)){
+                    padding: 25px !important;
+                }
+                @media only screen and (max-width: getScreen(xs)){
+                    padding: 15px !important;
+                }
+            }
+
+            .profile-input-title{
+                &-text{
+                    padding-left: 10px;
+                    padding-right: 10px;;
+                }
+                &-check{
+                    padding-left: 10px;
+                }
+
+            }
+            .profile-image{
+                &-wrap{
+
+                padding-left: 15px;
+                padding-right: 15px;
+                }
+            }
+        }
+    }
+
+    .profile{
+        input,textarea{
+            &::placeholder{
+                color: inherit !important;
+                opacity: 1 !important;
+            }
+        }
+        .selected .value{
+            color: inherit !important;
+        }
+        &-sub-inputs._k{
+            .profile-sub-inputs-wrap{
+                @media only screen and (min-width: getScreen(xl)){
+                    &:nth-child(2){
+                        flex: 0 0 25% !important;
+                    }
+                    &:last-child{
+                        flex: 0 0 50% !important;
+                    }
+                }
+            }
+            &.x{
+                .profile-sub-inputs-wrap{
+                    @media only screen and (min-width: getScreen(xl)){
+                        &:nth-child(2){
+                            flex: 0 0 25% !important;
+                        }
+                        &:last-child{
+                            flex: 0 0 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: getScreen(xs)) and (max-width: getScreen(sm)){
+        .profile{
+            &-top{
+                &-inputs{
+                    padding-left: 12px;
+                    .input{
+                        &-wrap{
+                            &:nth-child(1), &:nth-child(2) {
+                                flex: 0 0 100%;
+                            }
+                            @for $_i from 3 through 8 {
+                                &:nth-child(#{$_i}){
+                                    flex: 0 0 50%;
+                                }
+                            }
+                            &:nth-child(9){
+                                flex: 0 0 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: getScreen(xs)){
+        .profile-top{
+            &-inputs{
+                flex-direction: column;
+
+                .input{
+                    &-wrap{
+                        flex: 0 0 100% !important;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    ._file-lie{
+        position: relative;
+
+        .icon{
+            position: absolute;
+            top: 0;
+            right: 15px;
+            bottom: 0;
+            left: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            cursor: pointer;
+        }
+    }
+    .right-assets{
+        .profile-sub-inputs{
+            &-wrap_{
+                flex: 1 0 50% !important;
+                padding: 5px;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+
+
+                >*:not(.profile-sub-inputs-action){
+                    flex: 1;
+                }
+                .profile-sub-inputs-action{
+                    padding: 0 15px;
+                    align-self: center;
+                    padding-right: 2.5px;
+                    &-close{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        padding: 0;
+                        cursor: pointer;
+                        width: 30px;
+                        border: 0;
+                        background-color: transparent;
+                        svg{
+                            width: 30px;
+                        }
+                    }
+
+                    @media only screen and (max-width: getScreen(xs)){
+                        display: none;
+                    }
+                }
+            }
+            @media only screen and (min-width: getScreen(xs)){
+                &-wrap_{
+                    flex: 1 0 50% !important;
+                }
+            }
+
+            @media only screen and (max-width: getScreen(xs)){
+                &-wrap_{
+                    flex: 0 0 100% !important;
+                }
+            }
+
+            .sub-wrap{
+                flex: 0 0 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }   
+    }
+    .inrow{
+        flex-wrap: wrap;
+        .profile-sub-inputs-wrap_{
+            flex: 1 0 25%;
+            padding: 5px;
+            @media only screen and (max-width: getScreen(md)){
+                flex: 0 0 50%;
+            }
+            @media only screen and (max-width: getScreen(xs)){
+                flex: 0 0 100%;
+            }
+        }
+        padding-top: 15px;
+        border-bottom: 1px solid rgba(getColor(pink), .3);
+        padding-bottom: 15px;;
+
+        &:last-child{
+            padding-bottom: 0;
+            border: 0;
+        }
+        &:first-child{
+            padding-top: 0;
+        }
+
+        .profile-radios{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            @media only screen and (max-width: getScreen(sm)){
+                flex-direction: column;
+            }
+            @media only screen and (max-width: getScreen(xs)){
+                align-items: flex-start;
+            }
+            .profile-radios-right{
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                @media only screen and (max-width: getScreen(sm)){
+                    justify-content: center !important;
+                }
+
+            }
+            .profile-radios-left{
+                padding-right: 15px;
+                padding-left: 20px;
+                @media only screen and (max-width: getScreen(sm)){
+                    padding-bottom: 5px;
+                    padding-right: 0;
+                }
+            }
+
+            .radio{
+                &-wrap{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-left: 15px;
+                    @media only screen and (max-width: getScreen(xs)){
+                        padding: 10px 5px;
+                        margin: 0;
+                        flex:1 0 50%;
+                    }
+
+
+                    label {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,149 @@
+
+@import 'vars';
+
+.c-page-reg{
+    .c-main{
+        &-box{
+            border: 0;
+        }
+    }
+
+    .c-post-header{
+        padding-bottom: 0;
+    }
+
+    .page-thing-title{
+        color: getColor(white);
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        border-bottom: 2px solid getColor(white);
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+        &-wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    
+    .c-main-box-row{
+        justify-content: center;
+
+        >.c-col{
+            flex: 0 0 750px;
+            width: 750px;
+            max-width: 100%;
+        }
+        .reg-content{
+            padding: 30px;
+            
+            padding-top: 20px;
+            @media only screen and (max-width: getScreen(xs)){
+                padding: 15px;
+            }
+            &-forgot{
+                &-link{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-content: center;
+                    text-align: center;;
+                    margin-top: 15px;
+                    &-link{
+                        display: block;
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: getColor(borderBlue);
+                    }
+                }
+            }
+            &-text{
+                color: getColor(dark);
+                font-size: 12px;
+                text-align: center;
+                &-title{
+                    font-size: 16px;
+                    padding-bottom: 2px;
+                }
+            }
+
+            &-button{
+                margin-top: 10px;
+                &-wrap{
+                    @extend .button-wrap;
+                }
+                &-link{
+                    @extend .button-link;
+                    background-color: getColor(darkblue);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                &.pink{
+                    .reg-content-button-link{
+                        background-color: getColor(pink);
+                    }
+                }
+                
+
+                .icon{
+                    margin-right: 10px;
+                    svg{
+                        width: 15px;
+                        path{
+                            fill: getColor(white);
+                        }
+                    }
+                }
+
+                .text{
+                    font-size: 16px;
+                }
+            }
+            .reg-form, .auth-form{
+                margin-top: 5px;;
+                .c-container-fluid{
+                    padding: 0 15px;
+                }
+                .c-row{
+                    padding: 0;
+                    .input{
+                        width: 100%;
+                        border: 1px solid rgba(getColor(dark), .1);
+                        border-radius: $radius;
+                        color: getColor(dark);
+                        padding: 10px;
+                    }
+                    .c-col{
+                        margin-top: 10px;
+                        @media only screen and (min-width: getScreen(xs)){
+                            padding: 0 5px  !important;
+                        }
+                        @media only screen and (max-width: getScreen(xs)){
+                            padding: 0   !important;
+                        }
+                    }
+                }
+            }
+            .reg-form{
+                border-bottom: 1px solid rgba(getColor(dark), .2);
+                padding-bottom: 15px;
+
+            }
+
+            .auth-form{
+                .reg-content-text{
+                    padding: 10px 0;
+                }
+            }
+            
+        }
+    }
+}

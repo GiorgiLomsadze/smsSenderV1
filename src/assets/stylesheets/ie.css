@@ -1,0 +1,7 @@
+.c-page-profile .c-post-header .page-thing-title-item-wrap{
+	display: block !important;
+	border: 5px solid red !important;
+}
+body{
+	background: red !important;
+}

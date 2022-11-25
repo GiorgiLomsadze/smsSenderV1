@@ -1,0 +1,134 @@
+.button-wrap, .c-page-login .c-main-box-row .login-content-button-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+.button-link, .c-page-login .c-main-box-row .login-content-button-link {
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+  padding: 11px 45px;
+  font-size: 16px;
+  border: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .button-link, .c-page-login .c-main-box-row .login-content-button-link {
+    flex: 1;
+  }
+}
+
+.c-page-login .c-main-box {
+  border: 0;
+}
+.c-page-login .c-post-header {
+  padding-bottom: 0;
+}
+.c-page-login .page-thing-title {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.c-page-login .page-thing-title-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.c-page-login .c-main-box-row {
+  justify-content: center;
+}
+.c-page-login .c-main-box-row > .c-col {
+  flex: 0 0 500px;
+  width: 500px;
+  max-width: 100%;
+}
+.c-page-login .c-main-box-row .login-assets {
+  border-bottom: 1px solid rgba(62, 62, 62, 0.2);
+  padding-bottom: 20px;
+}
+.c-page-login .c-main-box-row .login-rest-assets {
+  padding-top: 20px;
+}
+.c-page-login .c-main-box-row .login-rest-assets-text {
+  font-size: 12px;
+  color: #3E3E3E;
+  text-align: center;
+  padding-bottom: 0px;
+}
+.c-page-login .c-main-box-row .login-content {
+  padding: 30px;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .c-page-login .c-main-box-row .login-content {
+    padding: 15px;
+  }
+}
+.c-page-login .c-main-box-row .login-content-text {
+  color: #3E3E3E;
+  font-size: 12px;
+  text-align: center;
+}
+.c-page-login .c-main-box-row .login-content-text-title {
+  font-size: 16px;
+}
+.c-page-login .c-main-box-row .login-content-forgot-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 15px;
+}
+.c-page-login .c-main-box-row .login-content-forgot-link-link {
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #008DD0;
+}
+.c-page-login .c-main-box-row .login-content-input {
+  margin-top: 10px;
+}
+.c-page-login .c-main-box-row .login-content-input input {
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(62, 62, 62, 0.1);
+  border-radius: 8px;
+  color: #3E3E3E;
+  padding: 10px;
+}
+.c-page-login .c-main-box-row .login-content-button {
+  margin-top: 10px;
+}
+.c-page-login .c-main-box-row .login-content-button-link {
+  background-color: #0051CC;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.c-page-login .c-main-box-row .login-content-button.pink .login-content-button-link {
+  background-color: #B2006B;
+}
+.c-page-login .c-main-box-row .login-content-button .icon {
+  margin-right: 10px;
+}
+.c-page-login .c-main-box-row .login-content-button .icon svg {
+  width: 15px;
+}
+.c-page-login .c-main-box-row .login-content-button .icon svg path {
+  fill: #fff;
+}
+.c-page-login .c-main-box-row .login-content-button .text {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=login.css.map */

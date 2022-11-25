@@ -1,0 +1,17 @@
+<svg  viewBox="0 0 1725 95.76">
+  <defs>
+    <filter id="Path_38" x="0" y="0" width="1725" height="95.76" filterUnits="userSpaceOnUse">
+      <feOffset dy="-5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_463" data-name="Group 463" transform="translate(20806.5 15997.566)">
+    <g transform="matrix(1, 0, 0, 1, -20806.5, -15997.57)" filter="url(#Path_38)">
+      <path id="Path_38-2" data-name="Path 38" d="M0,0H1680s-414.167,50.76-834.167,50.76S0,0,0,0Z" transform="translate(1702.5 78.26) rotate(180)" fill="#fff"/>
+    </g>
+    <path id="Path_37" data-name="Path 37" d="M0,0H1680S1265.833,30.694,845.833,30.694,0,0,0,0Z" transform="translate(-19104 -15919.307) rotate(180)" fill="#0051cc"/>
+  </g>
+</svg>

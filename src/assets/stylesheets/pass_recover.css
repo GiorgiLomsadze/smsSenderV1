@@ -1,0 +1,90 @@
+.button-wrap, .c-page-pass_recover .c-main-box-row .pass_recover-content-button-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+.button-link, .c-page-pass_recover .c-main-box-row .pass_recover-content-button-link {
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+  padding: 11px 45px;
+  font-size: 16px;
+  border: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 767px) {
+  .button-link, .c-page-pass_recover .c-main-box-row .pass_recover-content-button-link {
+    flex: 1;
+  }
+}
+
+.c-page-pass_recover .c-main-box {
+  border: 0;
+}
+.c-page-pass_recover .c-post-header {
+  padding-bottom: 0;
+}
+.c-page-pass_recover .page-thing-title {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.c-page-pass_recover .page-thing-title-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.c-page-pass_recover .c-main-box-row {
+  justify-content: center;
+}
+.c-page-pass_recover .c-main-box-row > .c-col {
+  flex: 0 0 375px;
+  width: 375px;
+  max-width: 100%;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content {
+  padding: 30px;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .c-page-pass_recover .c-main-box-row .pass_recover-content {
+    padding: 15px;
+  }
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-text {
+  color: #3E3E3E;
+  font-size: 12px;
+  text-align: center;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button {
+  margin-top: 10px;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button-link {
+  background-color: #0051CC;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button .icon {
+  margin-right: 10px;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button .icon svg {
+  width: 15px;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button .icon svg path {
+  fill: #fff;
+}
+.c-page-pass_recover .c-main-box-row .pass_recover-content-button .text {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=pass_recover.css.map */
